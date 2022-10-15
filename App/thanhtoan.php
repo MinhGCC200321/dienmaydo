@@ -90,7 +90,7 @@ if(isset($_POST['btnGuiDonHang']))
 	{
 		$NoiGiao = $_POST['txtDiaChiNhan'];
 		$HTTT = $_POST['slHTTT'];
-		$NhapDonHang = mysqli_query($Connect,"INSERT INTO donhang (DH_NgayLap, DH_NoiGiao, DH_TrangThaiThanhToan, HTTT_Ma, KH_User) VALUES(now(),'".$NoiGiao."',0,'".$HTTT."','".$_SESSION['TaiKhoan']."')");
+		$NhapDonHang = pg_query($Connect,"INSERT INTO donhang (DH_NgayLap, DH_NoiGiao, DH_TrangThaiThanhToan, HTTT_Ma, KH_User) VALUES(now(),'".$NoiGiao."',0,'".$HTTT."','".$_SESSION['TaiKhoan']."')");
 		$DH_Ma = mysqli_insert_id($Connect);
 		foreach ($_SESSION['GioHang'] as $key => $item)
 		{

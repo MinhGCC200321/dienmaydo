@@ -163,7 +163,7 @@
 									<select name="slLoaiSP" class="input-select">
 										<option value='0'>Danh Mục Sản Phẩm</option>
 										<?php 
-										$SelectLSP = pg_query($Connect,"SELECT * FROM public.loaisanpham");
+										$SelectLSP = pg_query($Connect,"SELECT * FROM loaisanpham");
 										while ($RowSelectLSP = pg_fetch_array($SelectLSP))
 										{
 											?>
